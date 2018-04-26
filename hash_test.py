@@ -5,8 +5,8 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import hashes
 
 
-def CreateRawDataFile(filename):
-    with open(name=filename, mode='wb') as raw_data_file:
+def create_raw_data_file(filename):
+    with open(filename, mode='wb') as raw_data_file:
         # Hard-coded data will be written into this file
         raw_data_file.write(b'abc')
 
@@ -16,7 +16,7 @@ if "__main__" == __name__:
 
     filename = 'data.raw'
     if not os.path.exists(filename):
-        CreateRawDataFile(filename)
+        create_raw_data_file(filename)
 
     # 测试开始
     hash_alg = hashes.SHA256()
