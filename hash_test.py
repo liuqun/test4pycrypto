@@ -12,8 +12,9 @@ def CreateRawDataFile(filename):
 
 
 if "__main__" == __name__:
-    filename = 'data.raw'
     import os.path
+
+    filename = 'data.raw'
     if not os.path.exists(filename):
         CreateRawDataFile(filename)
 

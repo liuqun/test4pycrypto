@@ -1,7 +1,8 @@
 #!/usr/bin/env python2
-# -*-coding:utf-8 -*-
+# -*- coding:utf-8 -*-
 from __future__ import print_function
 import os
+
 from cryptography.hazmat.backends import openssl
 from cryptography.hazmat.primitives.ciphers import Cipher, modes
 from cryptography.hazmat.primitives.ciphers.algorithms import AES
