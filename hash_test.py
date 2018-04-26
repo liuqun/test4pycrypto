@@ -6,10 +6,9 @@ from cryptography.hazmat.primitives import hashes
 
 
 def CreateRawDataFile(filename):
-    file = open(name=filename, mode='wb')
-    # Hard-coded data will be written into this file
-    file.write(b'abc')
-    file.close()
+    with open(name=filename, mode='wb') as raw_data_file:
+        # Hard-coded data will be written into this file
+        raw_data_file.write(b'abc')
 
 
 if "__main__" == __name__:
