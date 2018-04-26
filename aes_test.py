@@ -9,15 +9,13 @@ from cryptography.hazmat.primitives.ciphers.algorithms import AES
 from cryptography.hazmat.primitives.padding import PKCS7
 
 
-def GeneratePseudoRandomBits128():
-    N_BITS = 128
-    key = b'1' * (N_BITS / 8)  # if DEBUG: iv = bytes(bytearray(N_BITS / 8))
-    return key
+def generate_pseudo_random_bits(n_bits):
+    return b'1' * int(n_bits / 8)
 
 
 if "__main__" == __name__:
     print('Pseudo random key:')
-    key = GeneratePseudoRandomBits128()
+    key = generate_pseudo_random_bits(128)
     print(key.encode('hex'))
     iv = os.urandom(16)  # if DEBUG: iv = bytes(bytearray(AES.block_size/8))
     print('Pseudo random IV:')
