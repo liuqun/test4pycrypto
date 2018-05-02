@@ -18,7 +18,7 @@ import sys
 
 def utf8_from_str(s):
     assert isinstance(s, str)
-    if sys.hexversion >= 0x03000000:  # Python version 3.x
+    if sys.version_info[0] >= 3:  # Python version 3.x
         utf8 = s.encode('utf-8')
     else:
         utf8 = bytes(s)
